@@ -3,7 +3,7 @@ This repository focuses on optimizing area illumination using a set of lamps, em
 
 ## Overview
 
-The objective of this project is to address the problem of illuminating an area using a set of lamps. The area is divided into $$\( m \)$$ regions or pixels, and we aim to achieve the desired illumination pattern across these regions. The lighting level in each region is represented as $$\( l_i \)$$, forming an $$\( m \)$$-vector $$\( \mathbf{l} \)$$ that represents the illumination levels across all regions. The power at which each lamp operates is denoted as $$\( p_i \)$$, forming an $$\( n \)$$-vector $$\( \mathbf{p} \)$$ representing the lamp powers.
+The objective of this project is to address the problem of illuminating an area using a set of lamps. The area is divided into $$\( m \)$$ regions or pixels, and we aim to achieve the desired illumination pattern across these regions. The lighting level in each region is represented as $$\( l_i \)$$, forming an $$\( m \)-vector$$ $$\( \mathbf{l} \)$$ that represents the illumination levels across all regions. The power at which each lamp operates is denoted as $$\( p_i \)$$, forming an $$\( n \)$$-vector $$\( \mathbf{p} \)$$ representing the lamp powers.
 
 To establish a relationship between the lamp powers and the illumination levels, we introduce matrix $$\( \mathbf{A} \)$$, an $$\( m \times n \)$$ matrix. The illumination level $$\( \mathbf{l} \)$$ can be expressed as a linear function of the lamp powers $$\( \mathbf{p} \)$$, i.e., 
 
