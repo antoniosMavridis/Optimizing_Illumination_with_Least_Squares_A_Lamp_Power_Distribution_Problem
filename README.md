@@ -13,7 +13,7 @@ $$
 
 Each column of matrix $\( \mathbf{A} \)$ represents the illumination pattern when a specific lamp is powered on, with all other lamps off. It is assumed that $\( \mathbf{A} \)$ has linearly independent columns, making it a tall matrix. Furthermore, the $\( i \)-th$ row of $\( \mathbf{A} \)$ represents the sensitivity of pixel $\( i \)$ to the lamp powers.
 
-The goal is to find lamp powers $\( \mathbf{p} \)$ that result in a desired illumination pattern $\( \mathbf{l}_{\text{des}} \)$, such as a uniform illumination pattern where all regions have the same value (e.g., $ \mathbf{l}_{\text{des}} $ = \[1,1,1,...,1\]). To achieve this, we utilize the method of least squares to find an estimate $\( \hat{\mathbf{p}} \)$ that minimizes the sum square deviation between $\( \mathbf{A}\mathbf{p} \)$ and $\( \mathbf{l}_{\text{des}} \)$, i.e., minimize 
+The goal is to find lamp powers $\( \mathbf{p} \)$ that result in a desired illumination pattern, such as a uniform illumination pattern where all regions have the same value. To achieve this, we utilize the method of least squares to find an estimate $\( \hat{\mathbf{p}} \)$ that minimizes the sum square deviation between $\( \mathbf{A}\mathbf{p} \)$ and $\( \mathbf{l}_{\text{des}} \)$, i.e., minimize 
 
 $$
 \| \mathbf{A}\mathbf{p} - \mathbf{l}_{\text{des}} \|^2
