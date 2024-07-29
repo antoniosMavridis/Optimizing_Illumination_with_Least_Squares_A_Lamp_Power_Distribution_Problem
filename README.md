@@ -1,4 +1,4 @@
-# Optimizing Illumination with Least_Squares: A_Lamp_Power_Distribution_Problem
+# Optimizing Illumination with Least_Squares: A Lamp Power Distribution Problem
 This repository focuses on optimizing area illumination using a set of lamps, employing the least squares method. It includes code for calculating optimal lamp powers, visualizing illumination patterns, and handling constraints like energy limits. Additional challenges involve optimizing lamp positions for improved results.
 
 ## Overview
