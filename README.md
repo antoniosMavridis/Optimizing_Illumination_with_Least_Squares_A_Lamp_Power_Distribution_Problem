@@ -7,9 +7,9 @@ The objective of this project is to address the problem of illuminating an area 
 
 To establish a relationship between the lamp powers and the illumination levels, we introduce matrix $\( \mathbf{A} \)$, an $\( m \times n \)$ matrix. The illumination level $\( \mathbf{l} \)$ can be expressed as a linear function of the lamp powers $\( \mathbf{p} \)$, i.e., 
 
-$
+$$
 \mathbf{l} = \mathbf{A}\mathbf{p}
-$
+$$
 
 Each column of matrix $\( \mathbf{A} \)$ represents the illumination pattern when a specific lamp is powered on, with all other lamps off. It is assumed that $\( \mathbf{A} \)$ has linearly independent columns, making it a tall matrix. Furthermore, the $\( i \)-th$ row of $\( \mathbf{A} \)$ represents the sensitivity of pixel $\( i \)$ to the lamp powers.
 
