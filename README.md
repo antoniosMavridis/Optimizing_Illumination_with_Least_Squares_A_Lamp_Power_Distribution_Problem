@@ -3,25 +3,25 @@ This repository focuses on optimizing area illumination using a set of lamps, em
 
 ## Overview
 
-The objective of this project is to address the problem of illuminating an area using a set of lamps. The area is divided into \( m \) regions or pixels, and we aim to achieve the desired illumination pattern across these regions. The lighting level in each region is represented as \( l_i \), forming an \( m \)-vector \( \mathbf{l} \) that represents the illumination levels across all regions. The power at which each lamp operates is denoted as \( p_i \), forming an \( n \)-vector \( \mathbf{p} \) representing the lamp powers.
+The objective of this project is to address the problem of illuminating an area using a set of lamps. The area is divided into $$\( m \)$$ regions or pixels, and we aim to achieve the desired illumination pattern across these regions. The lighting level in each region is represented as $$\( l_i \)$$, forming an $$\( m \)$$-vector $$\( \mathbf{l} \)$$ that represents the illumination levels across all regions. The power at which each lamp operates is denoted as $$\( p_i \)$$, forming an $$\( n \)$$-vector $$\( \mathbf{p} \)$$ representing the lamp powers.
 
-To establish a relationship between the lamp powers and the illumination levels, we introduce matrix \( \mathbf{A} \), an \( m \times n \) matrix. The illumination level \( \mathbf{l} \) can be expressed as a linear function of the lamp powers \( \mathbf{p} \), i.e., 
+To establish a relationship between the lamp powers and the illumination levels, we introduce matrix $$\( \mathbf{A} \)$$, an $$\( m \times n \)$$ matrix. The illumination level $$\( \mathbf{l} \)$$ can be expressed as a linear function of the lamp powers $$\( \mathbf{p} \)$$, i.e., 
 
 $$
 \mathbf{l} = \mathbf{A}\mathbf{p}
 $$
 
-Each column of matrix \( \mathbf{A} \) represents the illumination pattern when a specific lamp is powered on, with all other lamps off. It is assumed that \( \mathbf{A} \) has linearly independent columns, making it a tall matrix. Furthermore, the \( i \)-th row of \( \mathbf{A} \) represents the sensitivity of pixel \( i \) to the lamp powers.
+Each column of matrix $$\( \mathbf{A} \)$$ represents the illumination pattern when a specific lamp is powered on, with all other lamps off. It is assumed that $$\( \mathbf{A} \)$$ has linearly independent columns, making it a tall matrix. Furthermore, the $$\( i \)-th$$ row of $$\( \mathbf{A} \)$$ represents the sensitivity of pixel $$\( i \)$$ to the lamp powers.
 
-The goal is to find lamp powers \( \mathbf{p} \) that result in a desired illumination pattern \( \mathbf{l}_{\text{des}} \), such as a uniform illumination pattern where all regions have the same value (e.g., \( \mathbf{l}_{\text{des}} = [1,1,1,...,1] \)). To achieve this, we utilize the method of least squares to find an estimate \( \hat{\mathbf{p}} \) that minimizes the sum square deviation between \( \mathbf{A}\mathbf{p} \) and \( \mathbf{l}_{\text{des}} \), i.e., minimize 
+The goal is to find lamp powers $$\( \mathbf{p} \)$$ that result in a desired illumination pattern $$\( \mathbf{l}_{\text{des}} \)$$, such as a uniform illumination pattern where all regions have the same value (e.g., $$\( \mathbf{l}_{\text{des}} = [1,1,1,...,1] \)$$). To achieve this, we utilize the method of least squares to find an estimate $$\( \hat{\mathbf{p}} \)$$ that minimizes the sum square deviation between $$\( \mathbf{A}\mathbf{p} \)$$ and $$\( \mathbf{l}_{\text{des}} \)$$, i.e., minimize 
 
 $$
 \| \mathbf{A}\mathbf{p} - \mathbf{l}_{\text{des}} \|^2
 $$
 
-The project aims to find the lamp powers that approximate the desired illumination pattern \( \mathbf{l}_{\text{des}} \) using least squares optimization.
+The project aims to find the lamp powers that approximate the desired illumination pattern $$\( \mathbf{l}_{\text{des}} \)$$ using least squares optimization.
 
-The specific problem considered in this project involves a scenario with \( n = 10 \) lamps and an area represented by a \( 25 \times 25 \) grid, resulting in \( m = 625 \) pixels. Each pixel occupies an area of \( 1 \text{ m}^2 \). The positions and heights above the floor for the lamps are provided as coordinates. The illumination decays according to an inverse square law, where \( A_{ij} \) is proportional to the inverse square of the distance \( d_{ij} \) between the center of the pixel and the lamp position. The matrix \( \mathbf{A} \) is scaled such that when all lamps have power one, the average illumination level is one. The desired illumination pattern \( \mathbf{l}_{\text{des}} \) is a uniform pattern with a value of 1.
+The specific problem considered in this project involves a scenario with $$\( n = 10 \)$$ lamps and an area represented by a $$\( 25 \times 25 \)$$ grid, resulting in $$\( m = 625 \)$$ pixels. Each pixel occupies an area of $$\( 1 \text{ m}^2 \)$$. The positions and heights above the floor for the lamps are provided as coordinates. The illumination decays according to an inverse square law, where $$\( A_{ij} \)$$ is proportional to the inverse square of the distance $$\( d_{ij} \)$$ between the center of the pixel and the lamp position. The matrix $$\( \mathbf{A} \)$$ is scaled such that when all lamps have power one, the average illumination level is one. The desired illumination pattern $$\( \mathbf{l}_{\text{des}} \)$$ is a uniform pattern with a value of 1.
 
 ### Tasks:
 
